@@ -11,6 +11,7 @@ const config = {
     encrypt: true,
   },
 }
+
 const getProjects = async (req,res) => {
     try {
         const query = ` select * from projects`
