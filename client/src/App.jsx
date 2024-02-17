@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Outlet, Route, Routes } from "react-router-dom";
 import AppLayout from "./layout";
-import Home from "./components/home/Home";
+import Home from "./Components/home/Home";
 import Reports from "./components/reports/Reports";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
           <AppLayout>
             <Routes>
               <Route path="/" element={<Outlet />}>
-                <Route path="/home" element={<Home/>} />
-                <Route path="/home/profile" element={<Home/>} />
+
+                <Route path="/project/:projectId" element={<Home/>} />
               </Route>
               <Route path="/reports" element={<Outlet />}>
                 <Route path="" element={<Reports/>} />

@@ -42,3 +42,12 @@ html,body{
 .read-the-docs {
   color: #888;
 }
+.ant-menu-root{
+  background:black;
+}
+.ant-menu-title-content{
+  color:white
+}
+.ant-menu-item-selected>span{
+  color:black
+}

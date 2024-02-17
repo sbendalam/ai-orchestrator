@@ -1,11 +1,12 @@
 import React from 'react'
 import { Text } from '../../common/locale/script'
 import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 
 function Home() {
-  const locale = useSelector((state) => state.locale.value)
+  const params = useParams();
   return (
-    <div>{Text[locale].homeText}</div>
+    <div>{params.projectId}</div>
   )
 }
 

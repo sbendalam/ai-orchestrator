@@ -2,12 +2,12 @@ export const Text={
     En:{
         Brand:"Miracle",
         Team:"Labs",
-        withLove:"Built with ❤️ by Miracle Labs!",
+        withLove:"Built with ❤️ by CodeVengers",
         footerText:"Miracle software systems ©2023 Created by Miracle Labs",
         homeText:"Home content goes here",
         reportsText:"reports content goes here",
         homeMenu:{
-            main:"Home",
+            main:"Projects",
             subOne:"Children goes here"
         },
         reportsMenu:{

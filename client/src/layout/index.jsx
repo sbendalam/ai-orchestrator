@@ -17,24 +17,17 @@ const AppLayout = ({children}) => {
         <AppSidebar/>
         <Layout
           style={{
-            padding: '0 24px 24px',
+            padding: '12px',
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-            <Breadcrumb.Item>Love</Breadcrumb.Item>
-            <Breadcrumb.Item>From</Breadcrumb.Item>
-            <Breadcrumb.Item>Labs</Breadcrumb.Item>
-          </Breadcrumb>
+       
           <Content
             style={{
               padding: 24,
               margin: 0,
               minHeight: 280,
               background: colorBgContainer,
+              color:"black"
             }}
           >
             {children}
