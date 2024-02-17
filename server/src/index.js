@@ -9,11 +9,8 @@ const app = express();
 
 app.use(express.json())
 app.use(cors())
-app.use(express.static(path.resolve(__dirname, "../../publish")));
+// app.use(express.static(path.resolve(__dirname, "../../publish")));
 app.use("/api", apiRouter);
-console.log("In index")
-// 
-
 
 // app.get("*", function (req, res) {
 

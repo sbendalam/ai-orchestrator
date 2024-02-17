@@ -13,6 +13,5 @@ const { sendmail } = require("../controllers/send_remainder.controller");
 // require("./make_chat.route")(apiRouter)
 // require('./task_assign.route')(apiRouter)
 const apiRouter = express.Router()
-apiRouter.route('/sendmail').get(sendmail)
 require('./task_assign.route')(apiRouter)
 module.exports= apiRouter;
