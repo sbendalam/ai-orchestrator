@@ -42,6 +42,13 @@ app.get("*", function (req, res) {
 
   res.sendFile('index.html',{root: path.resolve(__dirname, "../../publish")});
 });
+
+require('dotenv').config()
+const mysql = require('mysql2')
+const connection = mysql.createConnection(process.env.DATABASE_URL)
+console.log('Connected to PlanetScale!')
+connection.end()
+
 app.listen(PORT,()=>{
     console.log(`Listening on port ${PORT}`)
 })
