@@ -1,0 +1,27 @@
+{
+  "name": "starter-kit",
+  "version": "1.0.0",
+  "description": "This is a Node and React starter template",
+  "main": "index.js",
+  
+  "scripts": {
+    "install-all": "npm i && cd client && npm i ",
+    "dev": "nodemon server/src/index.js ",
+    "start-mon": "concurrently --names \"server,client\" -c \"bgGreen.bold,bgBlue.bold\" \"nodemon server/src/index.js \" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build",
+    "build-deploy": "cd client && npm run build && cd .. && npm run create-zip",
+    "start": "node server/src/index.js ",
+    "create-zip": "gulp createDeploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sbendalam",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.1.0",
+    "nodemon":"3.0.1"
+  }
+}
