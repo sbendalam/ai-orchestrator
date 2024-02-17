@@ -84,12 +84,8 @@ const generate_techs_from_project_description = async (req,res) => {
         {technologies:[react,node,express]}
         `
         var  responsesNames = await generateText(systemPrompt,projectDescription)
-        responsesNames = responsesNames.data?.content
-        console.log("responsesNames",responsesNames)
-        console.log("responsesNames",JSON.parse(responsesNames))
-        let 
-        // return res.status(200).json({status:true,data:responsesNames.technologies})
-        // res.send("ok")
+        responsesNames = JSON.parse(responsesNames.data).technologies
+         return res.status(200).json({status:true,data:responsesNames})
     } catch (error) {
         console.log("Error in generateTechs",error)
         return res.status(500).json({status:false,data:"Error in generateTechs"})

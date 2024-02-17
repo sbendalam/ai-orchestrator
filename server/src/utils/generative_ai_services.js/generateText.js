@@ -30,7 +30,7 @@ let config = {
 
 const response = await axios.request(config)
  console.log("response",response.data.choices[0].message)
-return {status:true, data:response.data.choices[0].message}
+return {status:true, data:response.data.choices[0].message.content}
     } catch (error) {
         console.log("Error in Generate Text",error.response.data)
         return {status:false, data:"Error in Generate Text"}
