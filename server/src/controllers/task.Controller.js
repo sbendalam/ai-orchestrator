@@ -1,5 +1,5 @@
 const sql = require('mssql')
-const { generateText } = require('../utils/generative_ai_services.js/generateText')
+const { generateText } = require('../utils/generative_ai_services/generateText')
 require('dotenv').config()
 const config = {
   server : process.env.DB_SERVER,
