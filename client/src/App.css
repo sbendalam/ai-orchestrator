@@ -45,9 +45,9 @@ html,body{
 .ant-menu-root{
   background:black;
 }
-.ant-menu-title-content{
-  color:white
+.ant-menu-title-content,.ant-menu-item-icon,.ant-menu-submenu-arrow{
+  color:white !important
 }
 .ant-menu-item-selected>span{
-  color:black
+  color:black !important
 }

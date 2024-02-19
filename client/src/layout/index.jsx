@@ -1,38 +1,37 @@
-import React from 'react';
+import React from "react";
 
-import { Breadcrumb, Layout,  theme } from 'antd';
-import AppHeader from './header/Header';
-import AppSidebar from './sidebar/Sidebar';
-import AppFooter from './footer/Footer';
-const {  Content,Footer  } = Layout;
+import { Breadcrumb, Layout, theme } from "antd";
+import AppHeader from "./header/Header";
+import AppSidebar from "./sidebar/Sidebar";
+import AppFooter from "./footer/Footer";
+const { Content, Footer } = Layout;
 
-const AppLayout = ({children}) => {
+const AppLayout = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
-    <Layout className='!h-full'>
-     <AppHeader/>
+    <Layout className="!h-full">
+      <AppHeader />
       <Layout>
-        <AppSidebar/>
+        <AppSidebar />
         <Layout
           style={{
-            padding: '12px',
+            padding: "12px",
           }}
         >
-       
           <Content
             style={{
-              padding: 24,
+              padding: 12,
               margin: 0,
               minHeight: 280,
-              background: colorBgContainer,
-              color:"black"
+              background: "white",
+              color: "black",
             }}
           >
             {children}
           </Content>
-        <AppFooter/>
+          <AppFooter />
         </Layout>
       </Layout>
     </Layout>

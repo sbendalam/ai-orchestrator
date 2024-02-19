@@ -6,7 +6,9 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import AppLayout from "./layout";
 import Home from "./Components/home/Home";
 import Reports from "./components/reports/Reports";
+import { Toaster } from "@/components/ui/sonner";
 
+import "./global.css";
 function App() {
   const [count, setCount] = useState(0);
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -21,16 +23,16 @@ function App() {
           <AppLayout>
             <Routes>
               <Route path="/" element={<Outlet />}>
-
-                <Route path="/project/:projectId" element={<Home/>} />
+                <Route path="/project/:projectId" element={<Home />} />
               </Route>
               <Route path="/reports" element={<Outlet />}>
-                <Route path="" element={<Reports/>} />
+                <Route path="" element={<Reports />} />
               </Route>
             </Routes>
           </AppLayout>
         </Fragment>
       )}
+      <Toaster />
     </Fragment>
   );
 }
